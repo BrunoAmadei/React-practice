@@ -3,12 +3,12 @@ import './App.css';
 
 
 const carros = [
-  { categoria: "Esporte", preco: "110000", modelo: "Golf GTI" },
-  { categoria: "Esporte", preco: "120000", modelo: "Camaro" },
-  { categoria: "SUV", preco: "85000", modelo: "HRV" },
-  { categoria: "SUV", preco: "80000", modelo: "T-Cross" },
-  { categoria: "Utilitario", preco: "125000", modelo: "Hillux" },
-  { categoria: "Utilitario", preco: "90000", modelo: "Ranger" },
+  { categoria: "Esporte", preco: "110.000", modelo: "Golf GTI" },
+  { categoria: "Esporte", preco: "120.000", modelo: "Camaro" },
+  { categoria: "SUV", preco: "85.000", modelo: "HRV" },
+  { categoria: "SUV", preco: "80.000", modelo: "T-Cross" },
+  { categoria: "Utilitario", preco: "125.000", modelo: "Hillux" },
+  { categoria: "Utilitario", preco: "90.000", modelo: "Ranger" },
 ]
 
 const linhas = (cat) => {
@@ -63,6 +63,7 @@ function App() {
 
   return (
     <>
+      {pesquisaCategoria(categoria, setCategoria)}
       {TabelaCarros(categoria)}
     </>
   );

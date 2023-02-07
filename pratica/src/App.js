@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -12,14 +12,26 @@ const carros = [
 ]
 
 const linhas = (cat) => {
-    return(
-
-    )
+  const li = []
+  carros.forEach(
+    (carro) => {
+      if (carro.categoria.toUpperCase() == cat.toUpperCase() || cat == '') {
+        li.push(
+          <tr>
+            <td>{carro.categoria}</td>
+            <td>{carro.preco}</td>
+            <td>{carro.modelo}</td>
+          </tr>
+        )
+      }
+    }
+  )
+  return li
 }
 
-const TabelaCarros = (cat) =>{
-  return(
-    <table border={1} style={{borderCollapse: 'collapse'}}>
+const TabelaCarros = (cat) => {
+  return (
+    <table border={1} style={{ borderCollapse: 'collapse' }}>
       <thead>
         <tr>
           <th>Categoria</th> <th>Preço</th> <th>Modelo</th>
@@ -31,6 +43,16 @@ const TabelaCarros = (cat) =>{
     </table>
   )
 }
+
+const pesquisaCategoria = (cat, scat) => {
+  return (
+    <div>
+      <label>Digite uma categoria</label>
+      <input type={'text'} value={cat} onChange={(e) => scat(e.target.value)}></input>
+    </div>
+  )
+}
+
 
 function App() {
   const [categoria, setCategoria] = useState('')

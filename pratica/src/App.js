@@ -46,7 +46,7 @@ const TabelaCarros = (cat) => {
 
 const pesquisaCategoria = (cat, scat) => {
   return (
-    <div>
+    <div className='caixa-pesquisa'>
       <label>Digite uma categoria</label>
       <input
         type={'text'}

@@ -6,4 +6,15 @@
 
 body{
     font-family: 'Helvetica';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    padding: 20px;
+}
+
+th{
+    padding: 15px;
 }

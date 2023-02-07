@@ -31,7 +31,7 @@ const linhas = (cat) => {
 
 const TabelaCarros = (cat) => {
   return (
-    <table border={1} style={{ borderCollapse: 'collapse' }}>
+    <table>
       <thead>
         <tr>
           <th>Categoria</th> <th>Preço</th> <th>Modelo</th>

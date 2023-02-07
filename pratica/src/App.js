@@ -11,8 +11,25 @@ const carros = [
   { categoria: "Utilitario", preco: "90000", modelo: "Ranger" },
 ]
 
-const TabelaCarros = (cat) =>{
+const linhas = (cat) => {
+    return(
 
+    )
+}
+
+const TabelaCarros = (cat) =>{
+  return(
+    <table border={1} style={{borderCollapse: 'collapse'}}>
+      <thead>
+        <tr>
+          <th>Categoria</th> <th>Preço</th> <th>Modelo</th>
+        </tr>
+      </thead>
+      <tbody>
+        {linhas(cat)}
+      </tbody>
+    </table>
+  )
 }
 
 function App() {

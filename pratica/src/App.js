@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
 
+
+const carros = [
+  { categoria: "Esporte", preco: "110000", modelo: "Golf GTI" },
+  { categoria: "Esporte", preco: "120000", modelo: "Camaro" },
+  { categoria: "SUV", preco: "85000", modelo: "HRV" },
+  { categoria: "SUV", preco: "80000", modelo: "T-Cross" },
+  { categoria: "Utilitario", preco: "125000", modelo: "Hillux" },
+  { categoria: "Utilitario", preco: "90000", modelo: "Ranger" },
+]
+
+const TabelaCarros = (cat) =>{
+
+}
+
 function App() {
+  const [categoria, setCategoria] = useState('')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {TabelaCarros(categoria)}
+    </>
   );
 }
 

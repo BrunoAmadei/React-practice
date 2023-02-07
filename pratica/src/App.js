@@ -48,7 +48,11 @@ const pesquisaCategoria = (cat, scat) => {
   return (
     <div>
       <label>Digite uma categoria</label>
-      <input type={'text'} value={cat} onChange={(e) => scat(e.target.value)}></input>
+      <input
+        type={'text'}
+        value={cat}
+        onChange={(e) => scat(e.target.value)}>
+      </input>
     </div>
   )
 }
